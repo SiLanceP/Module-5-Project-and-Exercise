@@ -1,0 +1,43 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+    {% block sidebar %}
+        <ul class="mx-5">
+            <li>
+                <a href="#"> View Wines </a>
+            </li>
+            <li>
+                <a href="#"> View Large Dishes </a>
+            </li>
+            <li>
+                <a href="#"> View Coursed Menus </a>
+            </li>
+        </ul>
+    {% endblock %}
+
+                {% block content %}
+                <div class="col-10" style="width: 70%;">
+                    <table class="table table-striped">
+                        <thead >
+                            <tr>
+                                <th class="table-dark" scope="col"> Name </th>
+                                <th class="table-dark" scope="col"> Cooking Time </th>
+                                <th class="table-dark" scope="col"> Prep Time </th>    
+                                <th class="table-dark" scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for d in dishes %}
+                            <tr>
+                                <td> {{ d.name }} </td>
+                                <td> {{ d.prep_time }} </td>
+                                <td> {{ d.cook_time }} </td>
+                                <td> <button type="button" class="btn btn-secondary">Details</button>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endblock %}
+
+            

@@ -1,0 +1,46 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+    {% block sidebar %}
+    <ul class="mx-5">
+        <li>
+            <a href="#"> Back to Main </a>
+        </li>
+    </ul>
+    {% endblock %}
+
+    {% block content %}
+    <div class="col-10" style="width: 70%;">
+        <div class="card" style="width: 50rem;">
+            <div class="card-header">
+              <h6>Type In Dish Details:</h6>
+            </div>
+            <div class="row">
+                <br>
+                <div class="col-10">
+                    <br>
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+            </div>
+            <div class="row">
+                <br>
+                <div class="col-3">
+                    <br>
+                    <label for="cook-time" class="form-label">Cook Time:</label>
+                    <input type="text" class="form-control" id="cook-time">
+                </div>
+                <div class="col-3 offset-2">
+                    <br>
+                    <label for="prep-time" class="form-label">Prep Time:</label>
+                    <input type="text" class="form-control" id="prep-time">
+                </div>
+                <div class="w-100"></div>
+                <br>
+                <div class="col py-5">
+                    <button type="button" class="btn btn-secondary">Add to Dishes</button>
+                </div>
+            </div>
+        </div>    
+    </div>
+    {% endblock %}
