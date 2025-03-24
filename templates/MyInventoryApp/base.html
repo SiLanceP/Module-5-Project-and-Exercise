@@ -1,0 +1,64 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Water Bottles</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+        <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static '/bootstrap/css/custom.css' %}">
+
+        <script src="{% static '/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <style>
+            thead th {
+                position: sticky;
+                top: 0;
+            }
+            .table-responsive {
+                max-height: 700px;
+                overflow-y: auto;
+            }
+            .navbar-image {
+                background-image: url('{% static '/img/lebron.jpg' %}');
+                background-size: 100% 100%;
+                background-position: center; 
+                background-repeat: no-repeat; 
+                width: 100%;
+                height: 100px;
+            }
+            .navbar-brand {
+                font-family: 'arial';
+                font-size: 40px;
+                font-weight: bold;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-custom mb-3 sticky-top navbar-image" style="background-color:rgb(51, 0, 102);">
+            <div class="container-fluid">
+                <a class="navbar-brand mb-0" href="{% url 'view_supplier' %}">LeWaterBottles</span> </a>
+                <a href="" style="color:white"><i class="material-icons">add</i></a>
+    
+            </div>
+
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+
+                {% block content %}
+                {% endblock %}
+
+            </div>
+        </div>  
+        
+        <footer class="footer bg-custom" style="background-color: rgb(51, 0, 102);">
+
+            <!-- Copyright -->
+            <div class="container">&copy; 2024</div>
+            <!-- Copyright -->
+          
+        </footer>
+
+    </body>
+</html>
